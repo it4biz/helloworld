@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin title="helloworld" loader="DEFAULT">
+<overlays>
+		<overlay id="startup.helloworld" resourcebundle="content/helloworld/resources/lang/messages">
+			<menubar id="toolsmenu">
+	        	<menuitem id="helloworld" label="${Launcher.helloworld}" command="mantleXulHandler.openUrl('${Launcher.helloworld}','${Launcher.helloworld_TOOLTIP}','plugin/helloworld/api/default')"/>
+	      	</menubar>
+	    </overlay>
+	</overlays>
+	<lifecycle-listener class="pt.webdetails.cpk.CpkLifecycleListener"/>
+	<static-paths>
+		<static-path url="/helloworld/static" localFolder="static"/>
+		<static-path url="/helloworld/resources" localFolder="resources"/>
+	</static-paths>
+	<content-types>
+		<content-type>
+			<title>Helloworld</title>
+			<description></description>
+			<company name="" url="" logo="@PLUGIN_COMPANY_LOGO@"></company>
+		</content-type>
+	</content-types>
+	<content-generator
+		id="helloworld"
+		title="Helloworld"
+		type="helloworld"
+		class="pt.webdetails.cpk.CpkContentGenerator"/>
+	<!-- Menu entry -->
+	<menu-items>
+		<!--<menu-item id="helloworld_main" anchor="tools-submenu" label="Helloworld" command="content/helloworld/" type="MENU_ITEM" how="LAST_CHILD"/>-->
+	</menu-items>
+</plugin>
